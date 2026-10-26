@@ -1,0 +1,188 @@
+
+
+
+ 
+
+
+  
+  
+ 
+ 
+ 
+
+
+
+
+
+ 
+
+
+ 
+<script type="text/javascript" src="JS/jquery-3.6.0.js"></script> 
+<script type="text/javascript" src="table2CSV.js" ></script> 
+<script type="text/javascript" src="tableToExcel.js" ></script>  
+ 
+   
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Online Directory Enquiry System - Package Code </TITLE>
+    <META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=GENERATOR content="width=device-width, initial-scale=1.0">
+<link href="css/For_All.css" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript">
+function validate()
+{
+var point_pressed = event.srcElement.value.indexOf('.') ? true : false;
+if((event.keyCode >=48 && event.keyCode <= 57))
+{ 
+}
+else event.keyCode = 0; //Block the key code.
+}
+
+<!--  CODE ADDED/CHANGED BY SI TO CLOSE SECURITY VULNARABILITY	--> 
+function allnumeric(f){
+!(/^[Ññ0-9]*$/i).test(f.value)?f.value = f.value.replace(/[^Ññ0-9]/ig,''):null;
+}
+
+<!--  CODE ADDED/CHANGED BY SI TO CLOSE SECURITY VULNARABILITY	--> 
+function valid(f) {
+f.value=f.value.toUpperCase().replace(/([^A-Z0-9 ])/g,"");
+} 
+</script>
+
+<script type="text/javascript">
+//var width=Math.max(document.documentElement.clientWidth, window.innerWidth ||0);
+//alert(width);
+</script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>   
+
+</HEAD>
+<body class="bg-fix">
+    <div onclick="Math.max(document.documentElement.clientWidth, window.innerWidth ||0);Math.max(document.documentElement.clientHeight, window.innerHeight || 0);">
+
+
+<CENTER>
+   
+<CENTER>
+<!--<img name="a" alt="home" src="img/cbic-logo-new.jpg" />
+<br>
+<B><font size="4" color="darkblue">INDIAN CUSTOMS EDI SYSTEM </font></B><Br>
+<B><font size="3" color="darkblue">Customs Online Directory Enquiry System (CODES)</font></B><br>-->
+<div class="header-own"  >
+        <table>
+            <tr>
+                <td style="width: 2.5%;"></td>
+                <td style="width: 5%; "><img name="a" alt="home" src="imgs/logo.png" /></td>
+                <td style="width: 30%; text-align: center;">
+                    <B><font size="4.25" color="#36a7df">CENTRAL BOARD OF INDIRECT TAXES & CUSTOMS</font></B><Br>
+                    <B><font size="2.75" color="#494949">Department of Revenue, Ministry of Finance, Government of India</font></B>
+                    <!--                           #36a7df    #494949     #87888a  -->
+                </td>
+                <td style="width: 32%;"></td>
+                <td style="width: 23%; text-align: center;">
+                    <B><font size="4.25" color="#36a7df">INDIAN CUSTOMS EDI SYSTEM </font></B><Br>
+                    <B><font size="2.75" color="#494949">I4C (Indian Customs Compendium on Codes & Compliance)</font></B>
+                </td>
+                <td style="width: 5%;"><img name="a" alt="home" src="imgs/india_logo.png" /></td>
+                <td style="width: 2.5%;"></td>
+            </tr>
+        </table>
+    </div>
+</CENTER> 
+<!--<div style="background-color: darkseagreen;color: darkblue;">   
+<marquee class="thmid" speed="20" direction="left" behaviour="alternate"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><B>Welcome to GSTIN ID Enquiry System </B></font></marquee>
+<TR>
+</div>-->
+
+
+
+<div style="background-color: lavender;color: darkblue;">
+     <marquee class="thmid" speed="20" direction="left" behaviour="alternate"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><B>Welcome to GSTIN ID Enquiry System</B></font></marquee>
+</div>
+<a href="home"  ><img name="a" alt="home" src="imgs/home.png"  style="height:35px;width:35px;"/></a>
+<a href="home" align="left" ><img name="a" alt="back" src="imgs/back.jpg" style="height:35px;width:35px;margin-left:85%;"/></a> 
+<br>
+<br><br>
+ 
+<CENTER>
+<form action="GSTN-Number-Enquiry" method="post">
+<table style="border-radius: 10px;" cellpadding="2" bgcolor="#6c7ae0" cellspacing="0" border="0" > 
+<tr>
+<td> 
+<table style="border-radius: 10px;" cellpadding="2" bgcolor="#FFFFFF" cellspacing="0" border="0" > 
+<tr>
+<td> 
+<table style="border-radius: 10px;" cellpadding="5" bgcolor="#6c7ae0" cellspacing="0" border="0" >
+<tr style="height:1px;">
+<td bgcolor="#6c7ae0" align="center" valign="top"> 
+<font face="Verdana, sans-serif" color="darkslategray" size="3" ><B>GSTIN ID Enquiry</B></font>
+</td>
+</tr>
+<tr style="height:1px;">
+<td>
+<table cellpadding="10" bgColor="azure" cellspacing="0" border="0" width="100%" >
+<tr><td width="10%" align="left">
+    
+<CENTER>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="2" color=#000000><B>Enter GSTIN ID</B><br><br>
+<input type="text" name="gstn_no" value="" maxlength="15" onkeyup="valid(this)" onblur="valid(this)" style="height: 30px;font-size: large;"/></font>   
+</CENTER>
+</td></tr>
+
+
+<tr style="height:1px;">
+<td align="right" >
+<input style="height:22px;font-size:15;background-color: #6c7ae0;color:aliceblue" type="SUBMIT" id="submitbutton" value="Search" name="submitbutton"/>															
+<td>    
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table> 
+</td>
+</tr>
+</table>
+</form>
+</CENTER>
+<br> 
+
+
+<b style="color: green;padding-left:0px;font-size: large;">GSTIN ID = 27AAACR5055K1Z7 <BR> RELIANCE INDUSTRIES LIMITED <BR><BR> is active and available with Customs <BR> Last update received from GSTN for this ID: 16/10/2026 </b>
+
+
+
+<BR>
+
+<CENTER>  
+    <TABLE cellSpacing=0 cellPadding=3 width="100%" border="0"  style="position: fixed;bottom:5px; padding-left: 10px; padding-right: 15px;"> 
+    
+<TBODY> 
+ <TH bgColor="#ffffff" align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#990000"><B>
+Disclaimer:</B>null
+</font><a href="mailto:icegatehelpdesk@icegate.gov.in"><font face="Verdana" size="2" color=#000066>icegatehelpdesk@icegate.gov.in</font></a>       
+<TR> 
+<TD width="100%" bgColor=#000080><FONT face=Verdana color=#ffffff size=2>&nbsp;null</FONT><B><FONT face=Verdana color=#ffffff 
+size=1></FONT></B>
+</TD></TR>
+</TBODY> 
+</TABLE>
+</CENTER>
+
+
+</BODY>
+</HTML>
+
+

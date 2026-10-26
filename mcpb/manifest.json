@@ -1,0 +1,16 @@
+{
+  "manifest_version": "0.3",
+  "name": "icegate",
+  "display_name": "ICEGATE (Indian Customs)",
+  "version": "0.3.0",
+  "description": "Public ICEGATE enquiries: shipping bill status, import duty calculator, CBIC exchange rates, CODES directory, trade guides, GSTIN status, location codes, BE-to-GSTN, challan, vessel rotation, warehouse codes.",
+  "author": { "name": "quantavil" },
+  "license": "GPL-3.0-or-later",
+  "repository": { "type": "git", "url": "https://github.com/quantavil/icegate-mcp" },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": { "command": "node", "args": ["${__dirname}/server/index.js"] }
+  },
+  "compatibility": { "platforms": ["darwin", "win32", "linux"] }
+}

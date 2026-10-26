@@ -1,0 +1,50 @@
+{
+  "name": "icegate-mcp",
+  "version": "0.3.0",
+  "description": "MCP server for ICEGATE (Indian Customs) public enquiries: shipping bill status, import duty calculator, CBIC exchange rates, CODES directory, trade guides, GSTIN status and more",
+  "license": "GPL-3.0-or-later",
+  "author": "quantavil",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quantavil/icegate-mcp.git"
+  },
+  "homepage": "https://github.com/quantavil/icegate-mcp#readme",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "icegate",
+    "indian-customs",
+    "cbic",
+    "customs-duty",
+    "shipping-bill",
+    "exchange-rate",
+    "claude",
+    "codex"
+  ],
+  "type": "module",
+  "bin": {
+    "icegate-mcp": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "bun src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "test:live": "ICEGATE_LIVE=1 bun test",
+    "smoke": "bun scripts/smoke.ts",
+    "build:node": "bun build src/index.ts --target=node --outfile mcpb/server/index.js",
+    "pack:mcpb": "bun run build:node && bunx @anthropic-ai/mcpb pack mcpb icegate.mcpb"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "typescript": "^7.0.2"
+  }
+}
