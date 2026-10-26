@@ -36,27 +36,41 @@ Not available without login (ICEGATE returns "auth error"): Bill of Entry status
 
 ## Install
 
+Requires [Bun](https://bun.sh). Run straight from GitHub, no clone needed:
+
 ```bash
-bun install
-bun test             # unit + in-process server tests (ICEGATE mocked)
-bun run test:live    # adds a few live requests to ICEGATE
+bunx github:quantavil/icegate-mcp
 ```
 
 Claude Code:
 
 ```bash
-claude mcp add --scope user icegate -- bun /ABS/PATH/icegate-mcp/src/index.ts
+claude mcp add --scope user icegate -- bunx github:quantavil/icegate-mcp
 ```
 
 Codex (`~/.codex/config.toml`):
 
 ```toml
 [mcp_servers.icegate]
-command = "bun"
-args = ["/ABS/PATH/icegate-mcp/src/index.ts"]
+command = "bunx"
+args = ["github:quantavil/icegate-mcp"]
 ```
 
-Claude Desktop extension: `bun run pack:mcpb`, then open `icegate.mcpb` (bundled for Node, no Bun needed).
+Claude Desktop (`claude_desktop_config.json`):
+
+```json
+{ "mcpServers": { "icegate": { "command": "bunx", "args": ["github:quantavil/icegate-mcp"] } } }
+```
+
+Or build a one-click Desktop extension that runs on Node (no Bun needed): `bun run pack:mcpb`, then open `icegate.mcpb`.
+
+## Develop
+
+```bash
+bun install
+bun test             # unit + in-process server tests (ICEGATE mocked)
+bun run test:live    # adds a few live requests to ICEGATE
+```
 
 ## Config
 
